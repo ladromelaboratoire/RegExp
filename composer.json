@@ -1,0 +1,14 @@
+{
+    "name": "ladromelaboratoire/regexp",
+    "description": "Collection of usefull regexp",
+    "license": "GNU-GPL3",
+    "keywords": [
+    ],
+    "require": {
+        "php": ">=7.3"
+    },
+    "autoload":{
+        "psr-4" : {"ladromelaboratoire\\regexp\\" : "src"}
+
+    }
+}
