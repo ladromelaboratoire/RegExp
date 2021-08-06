@@ -1,5 +1,5 @@
 # RegExp
-Quelques expressions régulières utiles
+Quelques expressions régulières utiles, disponibles sous la forme d'un module PHP composer
 
 **Téléphone**  
 ````
