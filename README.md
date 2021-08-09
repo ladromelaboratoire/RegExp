@@ -22,5 +22,5 @@ Regex collection provied as a Composer module. This is provided for various coun
 ## Usage
 Just add this module as a dependency of your project and use it according to the test script : regex::pattern_name
 
-##PR's
+## PR's
 They are welcome
