@@ -20,7 +20,7 @@ class regexp {
 	public const IBAN_CH = '^CH[ ]?\d{2}[ ]?\d{5}[ ]?[\dA-Z]{12}$';
 	public const IBAN_DE = '^DE[ ]?\d{2}[ ]?\d{8}[ ]?\d{10}$';
 	public const IBAN_ES = '^ES[ ]?\d{2}[ ]?\d{4}[ ]?\d{4}[ ]?\d{2}[ ]?\d{10}$';
-	public const IBAN_FR = '^(FR|GP|GF|MQ|RE|YT|MC|NC|PF|PM|TF|WF)[ ]?\d{2}[ ]?\d{5}[ ]?\d{5}[ ]?[\dA-Z]{11}[ ]?\d{2}$';
+	public const IBAN_FR = '^(?:FR|GP|GF|MQ|RE|YT|MC|NC|PF|PM|TF|WF)[ ]?\d{2}[ ]?\d{5}[ ]?\d{5}[ ]?[\dA-Z]{11}[ ]?\d{2}$';
 	public const IBAN_GB = '^GB[ ]?\d{2}[ ]?[A-Z]{4}[ ]?\d{6}[ ]?\d{8}$';
 	public const IBAN_HR = '^HR[ ]?\d{2}[ ]?\d{7}[ ]?\d{10}$';
 	public const IBAN_IE = '^IE[ ]?\d{2}[ ]?[A-Z]{4}[ ]?\d{6}[ ]?\d{8}$';
@@ -34,12 +34,12 @@ class regexp {
 	public const IBAN_SE = '^SE[ ]?\d{2}[ ]?\d{3}[ ]?\d{17}$';
 	
 	//Date Time
-	public const HM24_INTL = '^([01]?[0-9]|2[0-3]):[0-5][0-9]$';
-	public const HMS24_INTL = '^([01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$';
+	public const HM24_INTL = '^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]$';
+	public const HMS24_INTL = '^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$';
 	
 	// Email
-	public const EMAIL_INTL = "^[A-Za-z0-9]+[A-Za-z0-9\/\-!&'*+%$#=?^_`{|}~\.]*@([a-z0-9\-]+\.)+[a-z]{2,3}$";
-	public const EMAIL_INTL_SIMPLE = '^[a-z0-9]+[a-z0-9\-+_~\.]*@([a-z0-9\-]+\.)+[a-z]{2,3}$';
+	public const EMAIL_INTL = "^[A-Za-z0-9]+[A-Za-z0-9\/\-!&'*+%$#=?^_`{|}~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,3}$";
+	public const EMAIL_INTL_SIMPLE = '^[a-z0-9]+[a-z0-9\-+_~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,3}$';
 	
 	// Phone
 	public const PHONE_INTL_RAW = '^(\+[1-9][0-9]{0,2}|[0]){1}[1-9][0-9]{7,12}$';
@@ -53,14 +53,14 @@ class regexp {
 	//Companies ids
 	public const APE_FR = '^\d{4}[A-Z]{1}$';
 	public const EORI_FR = '^FR\d{14}$';
-	public const NAF_FR = '^(\d{2}|\d{2}\.\d{1,2}[A-Z]?|\d{2}\.\d{2}\.\d{1,2})$';
+	public const NAF_FR = '^(?:\d{2}|\d{2}\.\d{1,2}[A-Z]?|\d{2}\.\d{2}\.\d{1,2})$';
 	public const RNA_FR = '^W\d{9}$';
 	public const SIREN_FR = '^\d{9}$';
 	public const SIRET_FR = '^\d{14}$';
 	
 	// Street number
 	public const STREETNO_FR = '^\d{1,5}[ ]?([a-z]{1}|bis|ter|quater)?$';
-	public const STREETNO_DE = '^([A-ZÄÖÜ][a-zäöüß]+(([.] )|( )|([-])))+[1-9][0-9]{0,3}[a-z]?$';
+	public const STREETNO_DE = '^(?:[A-ZÄÖÜ][a-zäöüß]+(([.] )|( )|([-])))+[1-9][0-9]{0,3}[a-z]?$';
 	public const STREETNO_US = '^((\d{1,6}\-\d{1,6})|(\d{1,6}\\\d{1,6})|(\d{1,6})(\/)(\d{1,6})|(\w{1}\-?\d{1,6})|(\w{1}\s\d{1,6})|((P\.?O\.?\s)((BOX)|(Box))(\s\d{1,6}))|((([R]{2})|([H][C]))(\s\d{1,6}\s)((BOX)|(Box))(\s\d{1,6}))?)$';
 	
 	// All EU VAT code per country
@@ -95,9 +95,9 @@ class regexp {
 	public const VAT_SK = '^SK\d{10}';
 	
 	// Zip codes
-	public const ZIPCODE_EU = '^(\d{3,6}|2(A|B)\d{3}|\d{2}[ -]?\d{3}|\d{3}[ -]?\d{2}|[A-Z]{2}\d{1}[A-Z]{1}[ ]?\d{1}[A-Z]{2}|LV-\d{4}|[A-Z]{1,3}[-]?\d{1,4}|\d{4}[-]?[A-Z]{2})$';
+	public const ZIPCODE_EU = '^(?:\d{3,6}|2(A|B)\d{3}|\d{2}[ -]?\d{3}|\d{3}[ -]?\d{2}|[A-Z]{2}\d{1}[A-Z]{1}[ ]?\d{1}[A-Z]{2}|LV-\d{4}|[A-Z]{1,3}[-]?\d{1,4}|\d{4}[-]?[A-Z]{2})$';
 	public const ZIPCODE_FR = '^\d{5}$';
-	public const ZIPCODE_IT = '^(V-|I-)?\d{5}$';
+	public const ZIPCODE_IT = '^(?:V-|I-)?\d{5}$';
 	public const ZIPCODE_US = '^[0-9]{5}(?:-[0-9]{4})?$';
 	
 	// hash
