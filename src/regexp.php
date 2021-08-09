@@ -1,19 +1,53 @@
 <?php
 
+/****************
+ * Collection of regular expressions to validate some input strings
+ * Ordered by Type / Country or zone / other tag
+ *
+ * Provided as they are - please test before use
+ * PR's are welcome
+ * 
+ ***************/
+
 namespace ladromelaboratoire\regexp;
 
 class regexp {
+	// IBAN
+	public const IBAN_AD = '^AD[ ]?\d{2}[ ]?\d{4}[ ]?\d{4}[ ]?[\dA-Z]{12}$';
+	public const IBAN_AT = '^AT[ ]?\d{2}[ ]?\d{5}[ ]?\d{11}$';
+	public const IBAN_BE = '^BE[ ]?\d{2}[ ]?\d{3}[ ]?\d{7}[ ]?\d{2}$';
+	public const IBAN_BG = '^BG[ ]?\d{2}[ ]?[A-Z]{4}[ ]?\d{4}[ ]?\d{2}[ ]?[\dA-Z]{8}$';
+	public const IBAN_CH = '^CH[ ]?\d{2}[ ]?\d{5}[ ]?[\dA-Z]{12}$';
+	public const IBAN_DE = '^DE[ ]?\d{2}[ ]?\d{8}[ ]?\d{10}$';
+	public const IBAN_ES = '^ES[ ]?\d{2}[ ]?\d{4}[ ]?\d{4}[ ]?\d{2}[ ]?\d{10}$';
+	public const IBAN_FR = '^(FR|GP|GF|MQ|RE|YT|MC|NC|PF|PM|TF|WF)[ ]?\d{2}[ ]?\d{5}[ ]?\d{5}[ ]?[\dA-Z]{11}[ ]?\d{2}$';
+	public const IBAN_GB = '^GB[ ]?\d{2}[ ]?[A-Z]{4}[ ]?\d{6}[ ]?\d{8}$';
+	public const IBAN_HR = '^HR[ ]?\d{2}[ ]?\d{7}[ ]?\d{10}$';
+	public const IBAN_IE = '^IE[ ]?\d{2}[ ]?[A-Z]{4}[ ]?\d{6}[ ]?\d{8}$';
+	public const IBAN_IS = '^IS[ ]?\d{2}[ ]?\d{4}[ ]?\d{2}[ ]?\d{6}[ ]?\d{10}$';
+	public const IBAN_IT = '^IT[ ]?\d{2}[ ]?[A-Z][ ]?\d{5}[ ]?\d{5}[ ]?[\dA-Z]{12}$';
+	public const IBAN_LI = '^LI[ ]?\d{2}[ ]?\d{5}[ ]?[\dA-Z]{12}$';
+	public const IBAN_LT = '^LT[ ]?\d{2}[ ]?\d{5}[ ]?\d{11}$';
+	public const IBAN_LU = '^LU[ ]?\d{2}[ ]?\d{3}[ ]?[\dA-Z]{13}$';
+	public const IBAN_MT = '^MT[ ]?\d{2}[ ]?[A-Z]{4}[ ]?\d{5}[ ]?[\dA-Z]{18}$';
+	public const IBAN_PL = '^PL[ ]?\d{2}[ ]?\d{3}[ ]?\d{4}[ ]?\d{1}[ ]?\d{16}$';
+	public const IBAN_SE = '^SE[ ]?\d{2}[ ]?\d{3}[ ]?\d{17}$';
 	
-	//Time
-	public const HM_INTL = '^([0-1][0-9]|2[0-3]):[0-5][0-9]$';
-	public const HMS_INTL = '^([0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$';
+	//Date Time
+	public const HM24_INTL = '^([01]?[0-9]|2[0-3]):[0-5][0-9]$';
+	public const HMS24_INTL = '^([01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$';
+	
 	// Email
 	public const EMAIL_INTL = '^[A-Za-z0-9\!#\$\\%\&\'\*\+\-\/=?^_`{|}~]+[A-Za-z0-9\!#\$\\%\&\'\*\+\-\/=?^_`{|}~\.]+@([a-z0-9\-]+\.)+[a-z]{2,3}$';
+	
 	// Phone
 	public const PHONE_EU = '^(\+[1-9][0-9]{0,2}|[0]){1}[1-9][0-9]{7,12}$';
 	public const PHONE_FR = '^(0|\+33)\d{9}$';
 	public const PHONE_FR_LANDLINE = '^(0|\+33)[1-59]\d{8}$';
 	public const PHONE_FR_MOBILE = '^(0|\+33)[6-7]\d{8}$';
+	public const PHONE_NL = '^\+[0-9]{2}|^\+[0-9]{2}\(0\)|^\(\+[0-9]{2}\)\(0\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\-\s]{10}$';
+	public const PHONE_US ='^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$';
+	
 	//Companies ids
 	public const APE_FR = '^\d{4}[A-Z]{1}$';
 	public const EORI_FR = '^FR\d{14}$';
@@ -21,8 +55,12 @@ class regexp {
 	public const RNA_FR = '^W\d{9}$';
 	public const SIREN_FR = '^\d{9}$';
 	public const SIRET_FR = '^\d{14}$';
+	
 	// Street number
-	public const STREETNO_FR = '^\d{1,5}[ ]?([a-z]{1}|bis|ter)?$';
+	public const STREETNO_FR = '^\d{1,5}[ ]?([a-z]{1}|bis|ter|quarter)?$';
+	public const STREETNO_DE = '^([A-ZÄÖÜ][a-zäöüß]+(([.] )|( )|([-])))+[1-9][0-9]{0,3}[a-z]?$';
+	public const STREETNO_US = '^((\d{1,6}\-\d{1,6})|(\d{1,6}\\\d{1,6})|(\d{1,6})(\/)(\d{1,6})|(\w{1}\-?\d{1,6})|(\w{1}\s\d{1,6})|((P\.?O\.?\s)((BOX)|(Box))(\s\d{1,6}))|((([R]{2})|([H][C]))(\s\d{1,6}\s)((BOX)|(Box))(\s\d{1,6}))?)$';
+	
 	// All EU VAT code per country
 	public const VAT_EU = '^(DE\d{9}|ATU\d{8}|BE0\d{9}|BG\d{9,10}|CY[0-9A-Z]{9}|HR\d{11}|DK\d{8}|ES[0-9A-Z]{1}\d{7}[0-9A-Z]{1}|EE\d{9}|FI\d{8}|FR\d{11}|EL\d{9}|HU\d{8}|IE\d{7}[A-Z]{1,2}|IT\d{11}|LV\d{11}|LT\d{9,12}|LU\d{8}|MT\d{8}|NL[\dB]{11}|PL\d{10}|PT\d{9}|CZ\d{8,10}|RO\d{2,10}|GB\d{9}|SK\d{10}|SI\d{8}|SE\d{10}01)$';
 	public const VAT_AT = '^ATU\d{8}$';
@@ -57,6 +95,13 @@ class regexp {
 	// Zip codes
 	public const ZIPCODE_EU = '^(\d{3,6}|2(A|B)\d{3}|\d{2}[ -]?\d{3}|\d{3}[ -]?\d{2}|[A-Z]{2}\d{1}[A-Z]{1}[ ]?\d{1}[A-Z]{2}|LV-\d{4}|[A-Z]{1,3}[-]?\d{1,4}|\d{4}[-]?[A-Z]{2})$';
 	public const ZIPCODE_FR = '^\d{5}$';
+	public const ZIPCODE_IT = '^(V-|I-)?\d{5}$';
+	public const ZIPCODE_US = '^[0-9]{5}(?:-[0-9]{4})?$';
+	
+	// hash
+	public const HASH_MD5 = '^[a-fA-F0-9]{32}$';
+	public const HASH_SHA1 = '^[a-fA-F0-9]{40}$';
+	public const HASH_SHA256 = '^[A-Fa-f0-9]{64}$';
 	
 }
 
