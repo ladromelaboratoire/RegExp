@@ -4,7 +4,7 @@
  * Collection of regular expressions to validate some input strings
  * Ordered by Type / Country or zone / other tag
  *
- * Provided as they are - please test before use
+ * Provided as they are - please test before use to be sure it covers all your use cases.
  * PR's are welcome
  * 
  ***************/
@@ -42,10 +42,11 @@ class regexp {
 	public const EMAIL_INTL_SIMPLE = '^[a-z0-9]+[a-z0-9\-+_~\.]*@([a-z0-9\-]+\.)+[a-z]{2,3}$';
 	
 	// Phone
-	public const PHONE_EU = '^(\+[1-9][0-9]{0,2}|[0]){1}[1-9][0-9]{7,12}$';
-	public const PHONE_FR = '^(0|\+33)\d{9}$';
-	public const PHONE_FR_LANDLINE = '^(0|\+33)[1-59]\d{8}$';
-	public const PHONE_FR_MOBILE = '^(0|\+33)[6-7]\d{8}$';
+	public const PHONE_INTL_RAW = '^(\+[1-9][0-9]{0,2}|[0]){1}[1-9][0-9]{7,12}$';
+	public const PHONE_INTL_FRIENDLY = '^(?:0|\+)(?:[\d \(\)\-\.]){6,19}(?:\d){1}$'; //+11 (0)12.3456-789
+	public const PHONE_FR = '^(?:0|\+33[ ]?)(?:\d[ \.]?)(?:\d\d[ \.]?){3}(?:\d\d)$'; //0123456789 or 01 23 45 67 89 or 01.23.45.67.89 or +33 1 23 45.67.89
+	public const PHONE_FR_LANDLINE = '^(?:0|\+33[ ]?)(?:[1-59][ \.]?)(?:\d\d[ \.]?){3}(?:\d\d)$'; 
+	public const PHONE_FR_MOBILE = '^(?:0|\+33[ ]?)(?:[67][ \.]?)(?:\d\d[ \.]?){3}(?:\d\d)$';
 	public const PHONE_NL = '^\+[0-9]{2}|^\+[0-9]{2}\(0\)|^\(\+[0-9]{2}\)\(0\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\-\s]{10}$';
 	public const PHONE_US ='^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$';
 	
