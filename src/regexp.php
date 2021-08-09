@@ -57,7 +57,7 @@ class regexp {
 	public const SIRET_FR = '^\d{14}$';
 	
 	// Street number
-	public const STREETNO_FR = '^\d{1,5}[ ]?([a-z]{1}|bis|ter|quarter)?$';
+	public const STREETNO_FR = '^\d{1,5}[ ]?([a-z]{1}|bis|ter|quater)?$';
 	public const STREETNO_DE = '^([A-ZÄÖÜ][a-zäöüß]+(([.] )|( )|([-])))+[1-9][0-9]{0,3}[a-z]?$';
 	public const STREETNO_US = '^((\d{1,6}\-\d{1,6})|(\d{1,6}\\\d{1,6})|(\d{1,6})(\/)(\d{1,6})|(\w{1}\-?\d{1,6})|(\w{1}\s\d{1,6})|((P\.?O\.?\s)((BOX)|(Box))(\s\d{1,6}))|((([R]{2})|([H][C]))(\s\d{1,6}\s)((BOX)|(Box))(\s\d{1,6}))?)$';
 	
