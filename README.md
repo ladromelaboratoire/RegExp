@@ -12,6 +12,8 @@ Regex collection provied as a Composer module. This is provided for various coun
 - European VAT number
 - Zip codes
 - IBAN
+- Hashes
+- URL
 
 ## Sample regexp
 ````
