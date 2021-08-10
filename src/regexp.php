@@ -37,7 +37,8 @@ class regexp {
 	// Date Time
 	public const HM24_INTL = '^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]$';
 	public const HMS24_INTL = '^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$';
-	
+	public const DATE_EU = '^(?:(?:(?:0?[1-9]|[12]\d)[ \/.-]0?2)|(?:0?\d|[1-2]\d|3[01])[ \/.-](?:0?[13-9]|1[0-2]))[ \/.-](?:\d{2}|\d{4})$'; //JJ/MM/DDDD or J/M/DDDD. space, dot and hyphen as separator.
+		
 	// Email
 	public const EMAIL_INTL = "^[A-Za-z0-9]+[A-Za-z0-9\/\-!&'*+%$#=?^_`{|}~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,12}$"; //match domain name such as *.accountants
 	public const EMAIL_INTL_SIMPLE = '^[a-z0-9]+[a-z0-9\-+_~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,12}$'; //match domain name such as *.accountants
