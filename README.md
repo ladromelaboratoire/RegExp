@@ -13,6 +13,8 @@ This is not (yet) a full list however.
 - E-mail
 - Hashes
 - IBAN
+- Personal IDs
+    - French NIR
 - Phone numbers
 - Street number
 - URL & IP

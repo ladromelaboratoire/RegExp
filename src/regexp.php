@@ -18,7 +18,7 @@ class regexp {
 	public const EORI_BE = '^BE0\d{9}$';
 	public const EORI_FR = '^FR\d{14}$';
 	public const EORI_IT = '^IT\d{11}$';
-	public const LEI_INTL = '^\d{4}[\dA-Z]{14}(?:0[2-9]|[1-8]\d|9[0-8])$'; // https://www.gleif.org/fr/about-lei/iso-17442-the-lei-code-structure/
+	public const LEI_INTL = '^\d{4}[\dA-Z]{14}(?:[0-8]\d|9[0-6])$'; // https://www.gleif.org/fr/about-lei/iso-17442-the-lei-code-structure/
 	public const NAF_FR = '^(?:\d{2}|\d{2}\.\d{1,2}[A-Z]?|\d{2}\.\d{2}\.\d{1,2})$';
 	public const RCS_FR = '^(?:RCS )?[a-zA-Z -]+[ ][A-Z]{1}[ ]?(?:(?:\d{3})[ ]?){2}(?:\d{3})$';
 	public const RNA_FR = '^W\d{9}$';
@@ -59,6 +59,9 @@ class regexp {
 	public const IBAN_MT = '^MT[ ]?\d{2}[ ]?[A-Z]{4}[ ]?\d{5}[ ]?[\dA-Z]{18}$';
 	public const IBAN_PL = '^PL[ ]?\d{2}[ ]?\d{3}[ ]?\d{4}[ ]?\d{1}[ ]?\d{16}$';
 	public const IBAN_SE = '^SE[ ]?\d{2}[ ]?\d{3}[ ]?\d{17}$';
+	
+	// Personal data
+	public const NIR_FR = '^[1-478]{1}\d{2}(?:0\d|1[0-2]|[23]\d|4[0-2]|[5-9]\d)(?:(?:0[1-9]|[1-9]\d|2A|2B)\d{3})\d{3}(?:[0-8]\d|9[0-6])$';
 	
 	// Phone
 	public const PHONE_INTL_RAW = '^(\+[1-9][0-9]{0,2}|[0]){1}[1-9][0-9]{7,12}$'; //sample +155566667777, +33123456789
