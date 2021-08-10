@@ -1,13 +1,15 @@
 # RegExp
 Collection d'expressions régulières utiles, disponibles sous la forme d'un module PHP composer.
 
-Regex collection provied as a Composer module. This is provided for various countries : France, Europe, US. This is not (yet) a full list however.
+Regex collection provied as a Composer module. This is provided for various countries when applicable : France, Europe, US.  
+This is not (yet) a full list however.
 
 ## Regex types
 - E-mail
-- Phone nubers
-- Hour
-- French companies ids (SIRET, SIREN, RNA, APE, ...)
+- Phone numbers
+- Date and hour
+- French companies ids (SIRET, SIREN, RNA, APE, RCS, ...)
+- European companies ids (EORI)
 - Street number
 - European VAT number
 - Zip codes
@@ -22,7 +24,7 @@ Regex collection provied as a Composer module. This is provided for various coun
 ````
 
 ## Usage
-Just add this module as a dependency of your project and use it according to the test script : regex::pattern_name
+Just add this module as a dependency of your project and use it according to the test script : `regex::pattern_name`
 
 ## PR's
 They are welcome
