@@ -12,6 +12,7 @@
 namespace ladromelaboratoire\regexp;
 
 class regexp {
+	
 	// IBAN
 	public const IBAN_AD = '^AD[ ]?\d{2}[ ]?\d{4}[ ]?\d{4}[ ]?[\dA-Z]{12}$';
 	public const IBAN_AT = '^AT[ ]?\d{2}[ ]?\d{5}[ ]?\d{11}$';
@@ -38,16 +39,18 @@ class regexp {
 	public const HMS24_INTL = '^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$';
 	
 	// Email
-	public const EMAIL_INTL = "^[A-Za-z0-9]+[A-Za-z0-9\/\-!&'*+%$#=?^_`{|}~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,3}$";
-	public const EMAIL_INTL_SIMPLE = '^[a-z0-9]+[a-z0-9\-+_~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,3}$';
+	public const EMAIL_INTL = "^[A-Za-z0-9]+[A-Za-z0-9\/\-!&'*+%$#=?^_`{|}~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,12}$"; //match domain name such as *.accountants
+	public const EMAIL_INTL_SIMPLE = '^[a-z0-9]+[a-z0-9\-+_~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,12}$'; //match domain name such as *.accountants
 	
 	// Phone
 	public const PHONE_INTL_RAW = '^(\+[1-9][0-9]{0,2}|[0]){1}[1-9][0-9]{7,12}$';
 	public const PHONE_INTL_FRIENDLY = '^(?:0|\+)(?:[\d \(\)\-\.]){6,19}(?:\d){1}$'; //sample +11 (0)12.3456-789
+	public const PHONE_DE = '^([\+][0-9]{1,3}[ \.\-])?([\(]{1}[0-9]{1,6}[\)])?([0-9 \.\-\/]{3,20})((x|ext|extension)[ ]?[0-9]{1,4})?$';
 	public const PHONE_FR = '^(?:0|\+33[ ]?)(?:\d[ \.]?)(?:\d\d[ \.]?){3}(?:\d\d)$'; //sample 0123456789 or 01 23 45 67 89 or 01.23.45.67.89 or +33 1 23 45.67.89
-	public const PHONE_FR_LANDLINE = '^(?:0|\+33[ ]?)(?:[1-59][ \.]?)(?:\d\d[ \.]?){3}(?:\d\d)$'; 
-	public const PHONE_FR_MOBILE = '^(?:0|\+33[ ]?)(?:[67][ \.]?)(?:\d\d[ \.]?){3}(?:\d\d)$';
+	public const PHONE_FR_LANDLINE = '^(?:0|\+33[ ]?)(?:[1-59][ \.]?)(?:\d\d[ \.]?){3}(?:\d\d)$'; //sample 0123456789 or 01 23 45 67 89 or 01.23.45.67.89 or +33 1 23 45.67.89
+	public const PHONE_FR_MOBILE = '^(?:0|\+33[ ]?)(?:[67][ \.]?)(?:\d\d[ \.]?){3}(?:\d\d)$'; //sample 0623456789 or 07 23 45 67 89 or 06.23.45.67.89 or +33 7 23 45.67.89
 	public const PHONE_NL = '^\+[0-9]{2}|^\+[0-9]{2}\(0\)|^\(\+[0-9]{2}\)\(0\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\-\s]{10}$';
+	public const PHONE_UK = '^(?:(?:\(?(?:0(?:0|11)\)?[\s-]?\(?|\+)44\)?[\s-]?(?:\(?0\)?[\s-]?)?)|(?:\(?0))(?:(?:\d{5}\)?[\s-]?\d{4,5})|(?:\d{4}\)?[\s-]?(?:\d{5}|\d{3}[\s-]?\d{3}))|(?:\d{3}\)?[\s-]?\d{3}[\s-]?\d{3,4})|(?:\d{2}\)?[\s-]?\d{4}[\s-]?\d{4}))(?:[\s-]?(?:x|ext\.?|\#)\d{3,4})?$';
 	public const PHONE_US ='^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$';
 	
 	// Companies ids
@@ -101,9 +104,14 @@ class regexp {
 	public const ZIPCODE_US = '^[0-9]{5}(?:-[0-9]{4})?$';
 	
 	// Hashes
-	public const HASH__MD5 = '^[a-fA-F0-9]{32}$';
-	public const HASH__SHA1 = '^[a-fA-F0-9]{40}$';
-	public const HASH__SHA256 = '^[A-Fa-f0-9]{64}$';
+	public const HASH_INTL_MD5 = '^[a-fA-F0-9]{32}$';
+	public const HASH_INTL_SHA1 = '^[a-fA-F0-9]{40}$';
+	public const HASH_INTL_SHA256 = '^[A-Fa-f0-9]{64}$';
+	
+	// URL
+	public const URL_INTL_FULL = '(?:(?:https?|ftp(?:es|s)?):\/\/)(?:\S+(?::\S*)?@|\d{1,3}(?:\.\d{1,3}){3}|(?:(?:[a-z\d\x{00a1}-\x{ffff}]+-?)*[a-z\d\x{00a1}-\x{ffff}]+)(?:\.(?:[a-z\d\x{00a1}-\x{ffff}]+-?)*[a-z\d\x{00a1}-\x{ffff}]+)*(?:\.[a-z\x{00a1}-\x{ffff}]{2,6}))(?::\d+)?(?:[^\s]*)?$';
+	public const URL_INTL_SIMPLE = '^(?:(?:https?):\/\/)(?::\d+)?(?:[^\s]*)?$';
+	public const IPV4_INTL = '^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])$';
 	
 }
 
