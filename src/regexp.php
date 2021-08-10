@@ -40,25 +40,25 @@ class regexp {
 	public const HASH_INTL_SHA256 = '^[A-Fa-f0-9]{64}$';
 	
 	// IBAN
-	public const IBAN_AD = '^AD[ ]?\d{2}[ ]?\d{4}[ ]?\d{4}[ ]?[\dA-Z]{12}$';
-	public const IBAN_AT = '^AT[ ]?\d{2}[ ]?\d{5}[ ]?\d{11}$';
-	public const IBAN_BE = '^BE[ ]?\d{2}[ ]?\d{3}[ ]?\d{7}[ ]?\d{2}$';
-	public const IBAN_BG = '^BG[ ]?\d{2}[ ]?[A-Z]{4}[ ]?\d{4}[ ]?\d{2}[ ]?[\dA-Z]{8}$';
-	public const IBAN_CH = '^CH[ ]?\d{2}[ ]?\d{5}[ ]?[\dA-Z]{12}$';
-	public const IBAN_DE = '^DE[ ]?\d{2}[ ]?\d{8}[ ]?\d{10}$';
-	public const IBAN_ES = '^ES[ ]?\d{2}[ ]?\d{4}[ ]?\d{4}[ ]?\d{2}[ ]?\d{10}$';
-	public const IBAN_FR = '^(?:FR|GP|GF|MQ|RE|YT|MC|NC|PF|PM|TF|WF)[ ]?\d{2}[ ]?\d{5}[ ]?\d{5}[ ]?[\dA-Z]{11}[ ]?\d{2}$';
-	public const IBAN_GB = '^GB[ ]?\d{2}[ ]?[A-Z]{4}[ ]?\d{6}[ ]?\d{8}$';
-	public const IBAN_HR = '^HR[ ]?\d{2}[ ]?\d{7}[ ]?\d{10}$';
-	public const IBAN_IE = '^IE[ ]?\d{2}[ ]?[A-Z]{4}[ ]?\d{6}[ ]?\d{8}$';
-	public const IBAN_IS = '^IS[ ]?\d{2}[ ]?\d{4}[ ]?\d{2}[ ]?\d{6}[ ]?\d{10}$';
-	public const IBAN_IT = '^IT[ ]?\d{2}[ ]?[A-Z][ ]?\d{5}[ ]?\d{5}[ ]?[\dA-Z]{12}$';
-	public const IBAN_LI = '^LI[ ]?\d{2}[ ]?\d{5}[ ]?[\dA-Z]{12}$';
-	public const IBAN_LT = '^LT[ ]?\d{2}[ ]?\d{5}[ ]?\d{11}$';
-	public const IBAN_LU = '^LU[ ]?\d{2}[ ]?\d{3}[ ]?[\dA-Z]{13}$';
-	public const IBAN_MT = '^MT[ ]?\d{2}[ ]?[A-Z]{4}[ ]?\d{5}[ ]?[\dA-Z]{18}$';
-	public const IBAN_PL = '^PL[ ]?\d{2}[ ]?\d{3}[ ]?\d{4}[ ]?\d{1}[ ]?\d{16}$';
-	public const IBAN_SE = '^SE[ ]?\d{2}[ ]?\d{3}[ ]?\d{17}$';
+	public const IBAN_AD = '^AD[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{4}[ ]?\d{4}[ ]?[\dA-Z]{12}$';
+	public const IBAN_AT = '^AT[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{5}[ ]?\d{11}$';
+	public const IBAN_BE = '^BE[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{3}[ ]?\d{7}[ ]?\d{2}$';
+	public const IBAN_BG = '^BG[ ]?(?:[0-8]\d|9[0-6])[ ]?[A-Z]{4}[ ]?\d{4}[ ]?\d{2}[ ]?[\dA-Z]{8}$';
+	public const IBAN_CH = '^CH[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{5}[ ]?[\dA-Z]{12}$';
+	public const IBAN_DE = '^DE[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{8}[ ]?\d{10}$';
+	public const IBAN_ES = '^ES[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{4}[ ]?\d{4}[ ]?\d{2}[ ]?\d{10}$';
+	public const IBAN_FR = '^(?:FR|GP|GF|MQ|RE|YT|MC|NC|PF|PM|TF|WF)[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{5}[ ]?\d{5}[ ]?[\dA-Z]{11}[ ]?\d{2}$';
+	public const IBAN_GB = '^GB[ ]?(?:[0-8]\d|9[0-6])[ ]?[A-Z]{4}[ ]?\d{6}[ ]?\d{8}$';
+	public const IBAN_HR = '^HR[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{7}[ ]?\d{10}$';
+	public const IBAN_IE = '^IE[ ]?(?:[0-8]\d|9[0-6])[ ]?[A-Z]{4}[ ]?\d{6}[ ]?\d{8}$';
+	public const IBAN_IS = '^IS[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{4}[ ]?\d{2}[ ]?\d{6}[ ]?\d{10}$';
+	public const IBAN_IT = '^IT[ ]?(?:[0-8]\d|9[0-6])[ ]?[A-Z][ ]?\d{5}[ ]?\d{5}[ ]?[\dA-Z]{12}$';
+	public const IBAN_LI = '^LI[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{5}[ ]?[\dA-Z]{12}$';
+	public const IBAN_LT = '^LT[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{5}[ ]?\d{11}$';
+	public const IBAN_LU = '^LU[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{3}[ ]?[\dA-Z]{13}$';
+	public const IBAN_MT = '^MT[ ]?(?:[0-8]\d|9[0-6])[ ]?[A-Z]{4}[ ]?\d{5}[ ]?[\dA-Z]{18}$';
+	public const IBAN_PL = '^PL[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{3}[ ]?\d{4}[ ]?\d{1}[ ]?\d{16}$';
+	public const IBAN_SE = '^SE[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{3}[ ]?\d{17}$';
 	
 	// Personal data
 	public const NIR_FR = '^[1-478]{1}\d{2}(?:0\d|1[0-2]|[23]\d|4[0-2]|[5-9]\d)(?:(?:0[1-9]|[1-9]\d|2A|2B)\d{3})\d{3}(?:[0-8]\d|9[0-6])$';
