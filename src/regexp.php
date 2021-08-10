@@ -18,7 +18,7 @@ class regexp {
 	public const EORI_BE = '^BE0\d{9}$';
 	public const EORI_FR = '^FR\d{14}$';
 	public const EORI_IT = '^IT\d{11}$';
-	public const LEI_INTL = '^\d{4}\d{2}[\dA-Z]{12}\d{2}$'; //gleif.org
+	public const LEI_INTL = '^\d{4}\d{2}[\dA-Z]{12}(?:0[2-9]|[1-8]\d|9[0-8])$'; //gleif.org
 	public const NAF_FR = '^(?:\d{2}|\d{2}\.\d{1,2}[A-Z]?|\d{2}\.\d{2}\.\d{1,2})$';
 	public const RCS_FR = '^(?:RCS )?[a-zA-Z -]+[ ][A-Z]{1}[ ]?(?:(?:\d{3})[ ]?){2}(?:\d{3})$';
 	public const RNA_FR = '^W\d{9}$';
@@ -82,7 +82,7 @@ class regexp {
 	public const IPV4_INTL = '^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])$';
 	
 	// VAT codes
-	public const VAT_EU = '^(EU[ ]?\d{8,10}|DE[ ]?\d{9}|AT[ ]?U\d{8}|BE[ ]?0\d{9}|BG[ ]?\d{9,10}|CY[ ]?[0-9A-Z]{9}|HR[ ]?\d{11}|DK[ ]?\d{8}|ES[ ]?[0-9A-Z]{1}\d{7}[0-9A-Z]{1}|EE[ ]?\d{9}|FI[ ]?\d{8}|FR[ ]?\d{11}|EL[ ]?\d{9}|HU[ ]?\d{8}|IE[ ]?\d{7}[A-Z]{1,2}|IT[ ]?\d{11}|LV[ ]?\d{11}|LT[ ]?\d{9,12}|LU[ ]?\d{8}|MT[ ]?\d{8}|NL[ ]?[\dB]{11}|PL[ ]?\d{10}|PT[ ]?\d{9}|CZ[ ]?\d{8,10}|RO[ ]?\d{2,10}|GB[ ]?(?:\d{9}|\d{12}|GD[ ]?[0-4]\d\d|HA[ ]?[5-9]\d\d)|SK[ ]?\d{10}|SI[ ]?\d{8}|SE[ ]?\d{10}01)$';
+	public const VAT_EU = '^(?:EU[ ]?\d{8,10}|DE[ ]?\d{9}|AT[ ]?U\d{8}|BE[ ]?0\d{9}|BG[ ]?\d{9,10}|CY[ ]?[0-9A-Z]{9}|HR[ ]?\d{11}|DK[ ]?\d{8}|ES[ ]?[0-9A-Z]{1}\d{7}[0-9A-Z]{1}|EE[ ]?\d{9}|FI[ ]?\d{8}|FR[ ]?\d{11}|EL[ ]?\d{9}|HU[ ]?\d{8}|IE[ ]?\d{7}[A-Z]{1,2}|IT[ ]?\d{11}|LV[ ]?\d{11}|LT[ ]?\d{9,12}|LU[ ]?\d{8}|MT[ ]?\d{8}|NL[ ]?[\dB]{11}|PL[ ]?\d{10}|PT[ ]?\d{9}|CZ[ ]?\d{8,10}|RO[ ]?\d{2,10}|GB[ ]?(?:\d{9}|\d{12}|GD[ ]?[0-4]\d\d|HA[ ]?[5-9]\d\d)|SK[ ]?\d{10}|SI[ ]?\d{8}|SE[ ]?\d{10}01)$';
 	public const VAT_AT = '^AT[ ]?U\d{8}$';
 	public const VAT_AU = '^AU[ ]?\d{11}$';
 	public const VAT_BE = '^BE[ ]?0\d{9}$';
