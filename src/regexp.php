@@ -18,7 +18,7 @@ class regexp {
 	public const EORI_BE = '^BE0\d{9}$';
 	public const EORI_FR = '^FR\d{14}$';
 	public const EORI_IT = '^IT\d{11}$';
-	public const LEI_INTL = '^\d{4}\d{2}[\dA-Z]{12}(?:0[2-9]|[1-8]\d|9[0-8])$'; //gleif.org
+	public const LEI_INTL = '^\d{4}[\dA-Z]{14}(?:0[2-9]|[1-8]\d|9[0-8])$'; // https://www.gleif.org/fr/about-lei/iso-17442-the-lei-code-structure/
 	public const NAF_FR = '^(?:\d{2}|\d{2}\.\d{1,2}[A-Z]?|\d{2}\.\d{2}\.\d{1,2})$';
 	public const RCS_FR = '^(?:RCS )?[a-zA-Z -]+[ ][A-Z]{1}[ ]?(?:(?:\d{3})[ ]?){2}(?:\d{3})$';
 	public const RNA_FR = '^W\d{9}$';
@@ -26,7 +26,7 @@ class regexp {
 	public const SIRET_FR = '^\d{14}$';
 	
 	// Date Time
-	public const DATE_EU = '^(?:(?:(?:0?[1-9]|[12]\d)[ \/.-]0?2)|(?:0?\d|[1-2]\d|3[01])[ \/.-](?:0?[13-9]|1[0-2]))[ \/.-](?:\d{2}|\d{4})$'; //JJ/MM/DD or J/M/DDDD.
+	public const DATE_EU = '^(?:(?:(?:0?[1-9]|[12]\d)[ \/.-]0?2)|(?:0?\d|[1-2]\d|3[01])[ \/.-](?:0?[13-9]|1[0-2]))[ \/.-](?:\d{2}|\d{4})$'; // JJ/MM/DD or J.M.DDDD
 	public const HM24_INTL = '^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]$';
 	public const HMS24_INTL = '^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$';
 		
