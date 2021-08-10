@@ -13,6 +13,32 @@ namespace ladromelaboratoire\regexp;
 
 class regexp {
 	
+	// Companies ids
+	public const APE_FR = '^\d{4}[A-Z]{1}$';
+	public const EORI_BE = '^BE0\d{9}$';
+	public const EORI_FR = '^FR\d{14}$';
+	public const EORI_IT = '^IT\d{11}$';
+	public const LEI_INTL = '^\d{4}\d{2}[\dA-Z]{12}\d{2}$'; //gleif.org
+	public const NAF_FR = '^(?:\d{2}|\d{2}\.\d{1,2}[A-Z]?|\d{2}\.\d{2}\.\d{1,2})$';
+	public const RCS_FR = '^(?:RCS )?[a-zA-Z -]+[ ][A-Z]{1}[ ]?(?:(?:\d{3})[ ]?){2}(?:\d{3})$';
+	public const RNA_FR = '^W\d{9}$';
+	public const SIREN_FR = '^\d{9}$';
+	public const SIRET_FR = '^\d{14}$';
+	
+	// Date Time
+	public const DATE_EU = '^(?:(?:(?:0?[1-9]|[12]\d)[ \/.-]0?2)|(?:0?\d|[1-2]\d|3[01])[ \/.-](?:0?[13-9]|1[0-2]))[ \/.-](?:\d{2}|\d{4})$'; //JJ/MM/DD or J/M/DDDD.
+	public const HM24_INTL = '^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]$';
+	public const HMS24_INTL = '^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$';
+		
+	// Email
+	public const EMAIL_INTL = "^[A-Za-z0-9]+[A-Za-z0-9\/\-!&'*+%$#=?^_`{|}~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,12}$"; //long TLD proof
+	public const EMAIL_INTL_SIMPLE = '^[a-z0-9]+[a-z0-9\-+_~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,12}$'; //long TLD proof
+	
+	// Hashes
+	public const HASH_INTL_MD5 = '^[a-fA-F0-9]{32}$';
+	public const HASH_INTL_SHA1 = '^[a-fA-F0-9]{40}$';
+	public const HASH_INTL_SHA256 = '^[A-Fa-f0-9]{64}$';
+	
 	// IBAN
 	public const IBAN_AD = '^AD[ ]?\d{2}[ ]?\d{4}[ ]?\d{4}[ ]?[\dA-Z]{12}$';
 	public const IBAN_AT = '^AT[ ]?\d{2}[ ]?\d{5}[ ]?\d{11}$';
@@ -34,15 +60,6 @@ class regexp {
 	public const IBAN_PL = '^PL[ ]?\d{2}[ ]?\d{3}[ ]?\d{4}[ ]?\d{1}[ ]?\d{16}$';
 	public const IBAN_SE = '^SE[ ]?\d{2}[ ]?\d{3}[ ]?\d{17}$';
 	
-	// Date Time
-	public const HM24_INTL = '^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]$';
-	public const HMS24_INTL = '^(?:[01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$';
-	public const DATE_EU = '^(?:(?:(?:0?[1-9]|[12]\d)[ \/.-]0?2)|(?:0?\d|[1-2]\d|3[01])[ \/.-](?:0?[13-9]|1[0-2]))[ \/.-](?:\d{2}|\d{4})$'; //JJ/MM/DD or J/M/DDDD.
-		
-	// Email
-	public const EMAIL_INTL = "^[A-Za-z0-9]+[A-Za-z0-9\/\-!&'*+%$#=?^_`{|}~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,12}$"; //long TLD proof
-	public const EMAIL_INTL_SIMPLE = '^[a-z0-9]+[a-z0-9\-+_~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,12}$'; //long TLD proof
-	
 	// Phone
 	public const PHONE_INTL_RAW = '^(\+[1-9][0-9]{0,2}|[0]){1}[1-9][0-9]{7,12}$'; //sample +155566667777, +33123456789
 	public const PHONE_INTL_FRIENDLY = '^(?:0|\+)(?:[\d \(\)\-\.]){6,19}(?:\d){1}$'; //sample +11 (0)12.3456-789
@@ -54,25 +71,19 @@ class regexp {
 	public const PHONE_UK = '^(?:(?:\(?(?:0(?:0|11)\)?[\s-]?\(?|\+)44\)?[\s-]?(?:\(?0\)?[\s-]?)?)|(?:\(?0))(?:(?:\d{5}\)?[\s-]?\d{4,5})|(?:\d{4}\)?[\s-]?(?:\d{5}|\d{3}[\s-]?\d{3}))|(?:\d{3}\)?[\s-]?\d{3}[\s-]?\d{3,4})|(?:\d{2}\)?[\s-]?\d{4}[\s-]?\d{4}))(?:[\s-]?(?:x|ext\.?|\#)\d{3,4})?$';
 	public const PHONE_US ='^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|[a-zA-Z0-9]{7})$';
 	
-	// Companies ids
-	public const APE_FR = '^\d{4}[A-Z]{1}$';
-	public const EORI_BE = '^BE0\d{9}$';
-	public const EORI_FR = '^FR\d{14}$';
-	public const EORI_IT = '^IT\d{11}$';
-	public const NAF_FR = '^(?:\d{2}|\d{2}\.\d{1,2}[A-Z]?|\d{2}\.\d{2}\.\d{1,2})$';
-	public const RNA_FR = '^W\d{9}$';
-	public const SIREN_FR = '^\d{9}$';
-	public const SIRET_FR = '^\d{14}$';
-	public const RCS_FR = '^[a-zA-Z -]+[ ][A-Z]{1}[ ]?(?:(?:\d{3})[ ]?){2}(?:\d{3})$';
-	
 	// Street number
 	public const STREETNO_FR = '^\d{1,5}[ ]?([a-z]{1}|bis|ter|quater)?$';
 	public const STREETNO_DE = '^(?:[A-ZÄÖÜ][a-zäöüß]+(([.] )|( )|([-])))+[1-9][0-9]{0,3}[a-z]?$';
 	public const STREETNO_US = '^((\d{1,6}\-\d{1,6})|(\d{1,6}\\\d{1,6})|(\d{1,6})(\/)(\d{1,6})|(\w{1}\-?\d{1,6})|(\w{1}\s\d{1,6})|((P\.?O\.?\s)((BOX)|(Box))(\s\d{1,6}))|((([R]{2})|([H][C]))(\s\d{1,6}\s)((BOX)|(Box))(\s\d{1,6}))?)$';
 	
+	// URL & IP
+	public const URL_INTL_FULL = '(?:(?:https?|ftp(?:es|s)?):\/\/)(?:\S+(?::\S*)?@|\d{1,3}(?:\.\d{1,3}){3}|(?:(?:[a-z\d\x{00a1}-\x{ffff}]+-?)*[a-z\d\x{00a1}-\x{ffff}]+)(?:\.(?:[a-z\d\x{00a1}-\x{ffff}]+-?)*[a-z\d\x{00a1}-\x{ffff}]+)*(?:\.[a-z\x{00a1}-\x{ffff}]{2,6}))(?::\d+)?(?:[^\s]*)?$';
+	public const URL_INTL_SIMPLE = '^(?:(?:https?):\/\/)(?::\d+)?(?:[^\s]*)?$';
+	public const IPV4_INTL = '^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])$';
+	
 	// VAT codes
-	public const VAT_EU = '^(EU[ ]?\d{8,10}|DE[ ]?\d{9}|AT[ ]?U[ ]?\d{8}|BE[ ]?0\d{9}|BG[ ]?\d{9,10}|CY[ ]?[0-9A-Z]{9}|HR[ ]?\d{11}|DK[ ]?\d{8}|ES[ ]?[0-9A-Z]{1}\d{7}[0-9A-Z]{1}|EE[ ]?\d{9}|FI[ ]?\d{8}|FR[ ]?\d{11}|EL[ ]?\d{9}|HU[ ]?\d{8}|IE[ ]?\d{7}[A-Z]{1,2}|IT[ ]?\d{11}|LV[ ]?\d{11}|LT[ ]?\d{9,12}|LU[ ]?\d{8}|MT[ ]?\d{8}|NL[ ]?[\dB]{11}|PL[ ]?\d{10}|PT[ ]?\d{9}|CZ[ ]?\d{8,10}|RO[ ]?\d{2,10}|GB[ ]?(?:\d{9}|\d{12}|GD[ ]?[0-4]\d\d|HA[ ]?[5-9]\d\d)|SK[ ]?\d{10}|SI[ ]?\d{8}|SE[ ]?\d{10}01)$';
-	public const VAT_AT = '^AT[ ]?U[ ]?\d{8}$';
+	public const VAT_EU = '^(EU[ ]?\d{8,10}|DE[ ]?\d{9}|AT[ ]?U\d{8}|BE[ ]?0\d{9}|BG[ ]?\d{9,10}|CY[ ]?[0-9A-Z]{9}|HR[ ]?\d{11}|DK[ ]?\d{8}|ES[ ]?[0-9A-Z]{1}\d{7}[0-9A-Z]{1}|EE[ ]?\d{9}|FI[ ]?\d{8}|FR[ ]?\d{11}|EL[ ]?\d{9}|HU[ ]?\d{8}|IE[ ]?\d{7}[A-Z]{1,2}|IT[ ]?\d{11}|LV[ ]?\d{11}|LT[ ]?\d{9,12}|LU[ ]?\d{8}|MT[ ]?\d{8}|NL[ ]?[\dB]{11}|PL[ ]?\d{10}|PT[ ]?\d{9}|CZ[ ]?\d{8,10}|RO[ ]?\d{2,10}|GB[ ]?(?:\d{9}|\d{12}|GD[ ]?[0-4]\d\d|HA[ ]?[5-9]\d\d)|SK[ ]?\d{10}|SI[ ]?\d{8}|SE[ ]?\d{10}01)$';
+	public const VAT_AT = '^AT[ ]?U\d{8}$';
 	public const VAT_AU = '^AU[ ]?\d{11}$';
 	public const VAT_BE = '^BE[ ]?0\d{9}$';
 	public const VAT_BG = '^BG[ ]?\d{9,10}$';
@@ -113,16 +124,6 @@ class regexp {
 	public const ZIPCODE_FR = '^\d{5}$';
 	public const ZIPCODE_IT = '^(?:V-|I-)?\d{5}$';
 	public const ZIPCODE_US = '^[0-9]{5}(?:-[0-9]{4})?$';
-	
-	// Hashes
-	public const HASH_INTL_MD5 = '^[a-fA-F0-9]{32}$';
-	public const HASH_INTL_SHA1 = '^[a-fA-F0-9]{40}$';
-	public const HASH_INTL_SHA256 = '^[A-Fa-f0-9]{64}$';
-	
-	// URL
-	public const URL_INTL_FULL = '(?:(?:https?|ftp(?:es|s)?):\/\/)(?:\S+(?::\S*)?@|\d{1,3}(?:\.\d{1,3}){3}|(?:(?:[a-z\d\x{00a1}-\x{ffff}]+-?)*[a-z\d\x{00a1}-\x{ffff}]+)(?:\.(?:[a-z\d\x{00a1}-\x{ffff}]+-?)*[a-z\d\x{00a1}-\x{ffff}]+)*(?:\.[a-z\x{00a1}-\x{ffff}]{2,6}))(?::\d+)?(?:[^\s]*)?$';
-	public const URL_INTL_SIMPLE = '^(?:(?:https?):\/\/)(?::\d+)?(?:[^\s]*)?$';
-	public const IPV4_INTL = '^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])$';
 	
 }
 
