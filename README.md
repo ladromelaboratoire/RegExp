@@ -28,7 +28,20 @@ This is not (yet) a full list however.
 ````
 
 ## Usage
-Just add this module as a dependency of your project and use it according to the test script : `regex::pattern_name`
+### With Composer
+Add the module as a dependency in your projet `composer.json` and start a `composer update` through CLI.  
+Just call the regexp as follow
+````php
+require '../vendor/autoload.php';
+use ladromelaboratoire\regexp\regexp;
+$result = preg_match('/'.regexp::EMAIL_INTL.'/', 'my-string-to-test');
+````
+
+### Without composer
+````php
+require 'path/to/regexp.php';
+$result = preg_match('/'.regexp::EMAIL_INTL.'/', 'my-string-to-test');
+````
 
 ## Dependency
 - PHP >= 7.3
