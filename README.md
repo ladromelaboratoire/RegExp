@@ -47,5 +47,5 @@ $result = preg_match('/'.regexp::EMAIL_INTL.'/', 'my-string-to-test');
 - PHP >= 7.3
 - Composer
 
-## PR's
-They are welcome
+## Contribution
+Please have a looh to [contribution guide](./contributing.md)
