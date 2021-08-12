@@ -1,7 +1,7 @@
 # RegExp
 Collection d'expressions régulières utiles, disponibles sous la forme d'un module PHP composer.
 
-Regex collection provied as a Composer module. This is provided for various countries when applicable : France, Europe, US.  
+Regex collection provied as a Composer module. This is provided for various countries when applicable : France, Germany, Belgium, Europe, US.  
 This is not (yet) a full list however.
 
 ## Regex types
@@ -28,19 +28,21 @@ This is not (yet) a full list however.
 ````
 
 ## Usage
+More examples are provided in test script.
+
 ### With Composer
 Add the module as a dependency in your projet `composer.json` and start a `composer update` through CLI.  
 Just call the regexp as follow
 ````php
 require '../vendor/autoload.php';
 use ladromelaboratoire\regexp\regexp;
-$result = preg_match('/'.regexp::EMAIL_INTL.'/', 'my-string-to-test');
+$result = preg_match('/'.regexp::EMAIL_INTL.'/', 'my-string_to.test@sub.server.verylongtld');
 ````
 
 ### Without composer
 ````php
 require 'path/to/regexp.php';
-$result = preg_match('/'.regexp::EMAIL_INTL.'/', 'my-string-to-test');
+$result = preg_match('/'.regexp::EMAIL_INTL.'/', 'my-string_to.test@sub.server.verylongtld');
 ````
 
 ## Dependency
@@ -48,4 +50,4 @@ $result = preg_match('/'.regexp::EMAIL_INTL.'/', 'my-string-to-test');
 - Composer
 
 ## Contribution
-Please have a looh to [contribution guide](./contributing.md)
+Please have a look to [contribution guide](./contributing.md)
