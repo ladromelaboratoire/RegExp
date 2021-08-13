@@ -39,7 +39,7 @@ class regexp {
 	public const HASH_INTL_SHA1 = '^[a-fA-F0-9]{40}$';
 	public const HASH_INTL_SHA256 = '^[A-Fa-f0-9]{64}$';
 	
-	// IBAN
+	// Finances
 	public const IBAN_AD = '^AD[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{4}[ ]?\d{4}[ ]?[\dA-Z]{12}$';
 	public const IBAN_AT = '^AT[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{5}[ ]?\d{11}$';
 	public const IBAN_BE = '^BE[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{3}[ ]?\d{7}[ ]?\d{2}$';
@@ -62,6 +62,7 @@ class regexp {
 	
 	// Personal data
 	public const NIR_FR = '^[1-478]{1}\d{2}(?:0\d|1[0-2]|[23]\d|4[0-2]|[5-9]\d)(?:(?:0[1-9]|[1-9]\d|2A|2B)\d{3})\d{3}(?:[0-8]\d|9[0-6])$';
+	public const SSN_US = '(?!0{3})(?!6{3})[0-8]\d{2}-(?!0{2})\d{2}-(?!0{4})\d{4}$';
 	
 	// Phone
 	public const PHONE_INTL_RAW = '^(\+[1-9][0-9]{0,2}|[0]){1}[1-9][0-9]{7,12}$'; //sample +155566667777, +33123456789
@@ -113,7 +114,7 @@ class regexp {
 	public const VAT_LU = '^LU[ ]?\d{8}$';
 	public const VAT_MT = '^MT[ ]?\d{8}$';
 	public const VAT_NL = '^NL[ ]?[\dB]{11}$';
-	public const VAT_NZ = '^NZ[ ]?\d{9}$';
+	public const VAT_NZ = '^NZ[ ]?\d{9,14}$';
 	public const VAT_PL = '^PL[ ]?\d{10}$';
 	public const VAT_PT = '^PT[ ]?\d{9}$';
 	public const VAT_RO = '^RO[ ]?\d{2,10}$';
