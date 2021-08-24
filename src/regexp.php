@@ -34,11 +34,6 @@ class regexp {
 	public const EMAIL_INTL = "^[A-Za-z0-9]+[A-Za-z0-9\/\-!&'*+%$#=?^_`{|}~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,12}$"; //long TLD proof
 	public const EMAIL_INTL_SIMPLE = '^[a-z0-9]+[a-z0-9\-+_~\.]*@(?:[a-z0-9\-]+\.)+[a-z]{2,12}$'; //long TLD proof
 	
-	// Hashes
-	public const HASH_INTL_MD5 = '^[a-fA-F0-9]{32}$';
-	public const HASH_INTL_SHA1 = '^[a-fA-F0-9]{40}$';
-	public const HASH_INTL_SHA256 = '^[A-Fa-f0-9]{64}$';
-	
 	// Finances
 	public const IBAN_AD = '^AD[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{4}[ ]?\d{4}[ ]?[\dA-Z]{12}$';
 	public const IBAN_AT = '^AT[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{5}[ ]?\d{11}$';
@@ -59,6 +54,14 @@ class regexp {
 	public const IBAN_MT = '^MT[ ]?(?:[0-8]\d|9[0-6])[ ]?[A-Z]{4}[ ]?\d{5}[ ]?[\dA-Z]{18}$';
 	public const IBAN_PL = '^PL[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{3}[ ]?\d{4}[ ]?\d{1}[ ]?\d{16}$';
 	public const IBAN_SE = '^SE[ ]?(?:[0-8]\d|9[0-6])[ ]?\d{3}[ ]?\d{17}$';
+
+	// Hashes
+	public const HASH_INTL_MD5 = '^[a-fA-F0-9]{32}$';
+	public const HASH_INTL_SHA1 = '^[a-fA-F0-9]{40}$';
+	public const HASH_INTL_SHA256 = '^[A-Fa-f0-9]{64}$';
+	
+	//License plates
+	public const LICENSEPLATE_FR = '^(?:(?:[A-H]{2}|[J-N]{2}|[P-R]{2}|S[A-H]|S[J-N]|S[P-R]|ST|S[V-Z]|T[A-H]|T[J-N]|T[P-T]|T[V-Z]|[V-Z][A-H]|[V-Z][J-N]|[V-Z][P-T]|[V-Z][V-Z])-\d{3}-(?:[A-H]{2}|[J-N]{2}|[P-R]{2}|S[A-H]|S[J-N]|S[P-R]|ST|S[V-Z]|T[A-H]|T[J-N]|T[P-T]|T[V-Z]|[V-Z][A-H]|[V-Z][J-N]|[V-Z][P-T]|[V-Z][V-Z]))$'; //french format from 2009
 	
 	// Personal data
 	public const NIR_FR = '^[1-478]{1}\d{2}(?:0\d|1[0-2]|[23]\d|4[0-2]|[5-9]\d)(?:(?:0[1-9]|[1-9]\d|2A|2B)\d{3})\d{3}(?:[0-8]\d|9[0-6])$';
