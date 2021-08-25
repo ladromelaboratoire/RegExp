@@ -61,7 +61,8 @@ class regexp {
 	public const HASH_INTL_SHA256 = '^[A-Fa-f0-9]{64}$';
 	
 	//License plates
-	public const LICENSEPLATE_FR = '^(?:(?:[A-H]{2}|[J-N]{2}|[P-R]{2}|S[A-H]|S[J-N]|S[P-R]|ST|S[V-Z]|T[A-H]|T[J-N]|T[P-T]|T[V-Z]|[V-Z][A-H]|[V-Z][J-N]|[V-Z][P-T]|[V-Z][V-Z])-\d{3}-(?:[A-H]{2}|[J-N]{2}|[P-R]{2}|S[A-H]|S[J-N]|S[P-R]|ST|S[V-Z]|T[A-H]|T[J-N]|T[P-T]|T[V-Z]|[V-Z][A-H]|[V-Z][J-N]|[V-Z][P-T]|[V-Z][V-Z]))$'; //french format from 2009
+	public const LICENSEPLATE_BE = '(?:(?:(?:[1-8]|O)-[A-Z]{3}-\d{3})|(?:(?:TL|GL|CD)-[A-Z]{2}-\d{3})|(?:(?:WA|XA)-\d{2}-[A-Z]{3})|(?:[AEP]-\d{1,3}))$'; //Belgian format from 2014 onward
+	public const LICENSEPLATE_FR = '^(?:(?:[A-H]{2}|[J-N]{2}|[P-R]{2}|S[A-H]|S[J-N]|S[P-R]|ST|S[V-Z]|T[A-H]|T[J-N]|T[P-T]|T[V-Z]|[V-Z][A-H]|[V-Z][J-N]|[V-Z][P-T]|[V-Z][V-Z])-\d{3}-(?:[A-H]{2}|[J-N]{2}|[P-R]{2}|S[A-H]|S[J-N]|S[P-R]|ST|S[V-Z]|T[A-H]|T[J-N]|T[P-T]|T[V-Z]|[V-Z][A-H]|[V-Z][J-N]|[V-Z][P-T]|[V-Z][V-Z]))$'; //French format from 2009 onward
 	
 	// Personal data
 	public const NIR_FR = '^[1-478]{1}\d{2}(?:0\d|1[0-2]|[23]\d|4[0-2]|[5-9]\d)(?:(?:0[1-9]|[1-9]\d|2A|2B)\d{3})\d{3}(?:[0-8]\d|9[0-6])$';
