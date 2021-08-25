@@ -13,6 +13,7 @@ This is not (yet) a full list however.
 - E-mail
 - Hashes
 - IBAN
+- License plates
 - Personal IDs
     - French NIR
 - Phone numbers
