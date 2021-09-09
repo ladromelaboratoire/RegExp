@@ -63,7 +63,7 @@ class regexp {
 	public const HASH_INTL_SHA256 = '/^[A-Fa-f0-9]{64}$/';
 	
 	//License plates
-	public const LICENSEPLATE_BE = '(?:(?:(?:[1-8]|O)-[A-Z]{3}-\d{3})|(?:(?:TL|GL|CD)-[A-Z]{2}-\d{3})|(?:(?:WA|XA)-\d{2}-[A-Z]{3})|(?:[AEP]-\d{1,3}))$/'; //Belgian format from 2014 onward
+	public const LICENSEPLATE_BE = '/^(?:(?:(?:[1-8]|O)-[A-Z]{3}-\d{3})|(?:(?:TL|GL|CD)-[A-Z]{2}-\d{3})|(?:(?:WA|XA)-\d{2}-[A-Z]{3})|(?:[AEP]-\d{1,3}))$/'; //Belgian format from 2014 onward
 	public const LICENSEPLATE_FR = '/^(?:(?:[A-H]{2}|[J-N]{2}|[P-R]{2}|S[A-H]|S[J-N]|S[P-R]|ST|S[V-Z]|T[A-H]|T[J-N]|T[P-T]|T[V-Z]|[V-Z][A-H]|[V-Z][J-N]|[V-Z][P-T]|[V-Z][V-Z])-\d{3}-(?:[A-H]{2}|[J-N]{2}|[P-R]{2}|S[A-H]|S[J-N]|S[P-R]|ST|S[V-Z]|T[A-H]|T[J-N]|T[P-T]|T[V-Z]|[V-Z][A-H]|[V-Z][J-N]|[V-Z][P-T]|[V-Z][V-Z]))$/'; //French format from 2009 onward
 	
 	// Personal data
@@ -127,8 +127,8 @@ class regexp {
 	public const VAT_RS = '/^RS[ ]?\d{9}$/';
 	public const VAT_SE = '/^SE[ ]?\d{10}01)$/';
 	public const VAT_SI = '/^SI[ ]?\d{8}$/';
-	public const VAT_SK = '/^SK[ ]?\d{10}/';
-	public const VAT_UA = '/^UA[ ]?\d{12}/';
+	public const VAT_SK = '/^SK[ ]?\d{10}$/';
+	public const VAT_UA = '/^UA[ ]?\d{12}$/';
 	
 	// Zip codes
 	public const ZIPCODE_EU = '/^(?:\d{3,6}|\d{2}[ -]?\d{3}|\d{3}[ -]?\d{2}|[A-Z]{2}\d{1}[A-Z]{1}[ ]?\d{1}[A-Z]{2}|LV-\d{4}|[A-Z]{1,3}[-]?\d{1,4}|\d{4}[-]?[A-Z]{2})$/';
