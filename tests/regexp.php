@@ -17,7 +17,7 @@ $data[] = array('AD 23 1234 1234 12345A12345B', regexp::IBAN_AD, 'Andora IBAN co
 
 
 foreach ($data as $line) {
-	$result = preg_match('/' . $line[1] . '/', $line[0]);
+	$result = preg_match( $line[1] , $line[0]);
 	echo $line[2] . " - " . $line[0] . " : ";
 	if($result === false) { 
 		echo "error ";

@@ -37,13 +37,13 @@ Just call the regexp as follow
 ````php
 require '../vendor/autoload.php';
 use ladromelaboratoire\regexp\regexp;
-$result = preg_match('/'.regexp::EMAIL_INTL.'/', 'my-string_to.test@sub.server.verylongtld');
+$result = preg_match(regexp::EMAIL_INTL, 'my-string_to.test@sub.server.verylongtld');
 ````
 
 ### Without composer
 ````php
 require 'path/to/regexp.php';
-$result = preg_match('/'.regexp::EMAIL_INTL.'/', 'my-string_to.test@sub.server.verylongtld');
+$result = preg_match(regexp::EMAIL_INTL, 'my-string_to.test@sub.server.verylongtld');
 ````
 
 ## Dependency
