@@ -2,7 +2,7 @@
 	"name": "ladromelaboratoire/regexp",
 	"description": "Collection of usefull regexp",
 	"license": "GPL-3.0-or-later",
-	"version": "0.0.2.1",
+	"version": "0.0.3",
 	"keywords": ["regexp", "php regexp"],
 	"require": {
 		"php": ">=7.3"
